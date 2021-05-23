@@ -1,0 +1,95 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  padding: 0;
+  margin: 0;
+  background-color: #FEFB1E;
+}
+
+#main {
+  height: 100vh;
+  padding: 2em 1em;
+  display: grid;
+  grid-template-rows: 10vh auto 10vh;
+}
+#main #head {
+  align-self: center;
+  justify-self: center;
+  font-family: "Bangers", cursive;
+  font-size: 3em;
+  color: rgba(0, 0, 0, 0.8);
+}
+#main #quote-box {
+  align-self: center;
+  justify-self: center;
+  background-color: white;
+  width: clamp(300px, 70vw, 700px);
+  padding: 1em;
+  border: solid 0.3em rgba(0, 0, 0, 0.8);
+  border-radius: 10% 5%/15% 7%;
+  font-family: "Architects Daughter", cursive;
+}
+#main #quote-box #quote {
+  display: flex;
+}
+#main #quote-box #quote.left {
+  flex-direction: row;
+}
+#main #quote-box #quote.right {
+  flex-direction: row-reverse;
+}
+#main #quote-box #quote #author-img {
+  max-height: 10em;
+}
+#main #quote-box #quote #text {
+  font-size: 1.5em;
+  font-weight: bold;
+  text-align: center;
+}
+#main #quote-box #quote #author {
+  font-size: 1.1em;
+  text-align: right;
+}
+#main #quote-box #quote #author::before {
+  content: "-";
+}
+#main #quote-box #control {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 2em;
+}
+#main #quote-box #control #tweet-quote {
+  font-size: 1.5em;
+  color: #FEFB1E;
+  text-stroke: 0.09em rgba(0, 0, 0, 0.8);
+  -webkit-text-stroke: 0.09em rgba(0, 0, 0, 0.8);
+  display: grid;
+  place-content: center;
+  cursor: pointer;
+  text-decoration: none;
+}
+#main #quote-box #control #new-quote {
+  border-radius: 10% 5%/15% 7%;
+  border: solid 0.2em rgba(0, 0, 0, 0.8);
+  padding: 0.5em 1em;
+  background-color: #FEFB1E;
+  font-family: "Architects Daughter", cursive;
+  font-weight: bold;
+  cursor: pointer;
+}
+#main #about {
+  align-self: center;
+  justify-self: center;
+  font-family: "Architects Daughter", cursive;
+  font-size: 1em;
+  font-weight: bold;
+  color: rgba(0, 0, 0, 0.8);
+}
+#main #about span.name {
+  padding-left: 0.5em;
+  font-size: 1.5em;
+}
+
+/*# sourceMappingURL=style.css.map */

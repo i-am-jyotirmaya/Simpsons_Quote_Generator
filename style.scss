@@ -1,0 +1,96 @@
+$theme-black: rgba(black, 0.8);
+$primary: #FEFB1E;
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  padding: 0;
+  margin: 0;
+  background-color: $primary;
+}
+
+#main {
+  height: 100vh;
+  padding: 2em 1em;
+  display: grid;
+  grid-template-rows: 10vh auto 10vh;
+  #head {
+    align-self: center;
+    justify-self: center;
+    font-family: 'Bangers', cursive;
+    font-size: 3em;
+    color: $theme-black;
+  }
+  #quote-box {
+    align-self: center;
+    justify-self: center;
+    background-color: white;
+    width: clamp(300px, 70vw, 700px);
+    padding: 1em;
+    border: solid 0.3em $theme-black;
+    border-radius: 10% 5%/15% 7%;
+    font-family: 'Architects Daughter', cursive;
+    #quote {
+      display: flex;
+      &.left {
+        flex-direction: row;
+      }
+      &.right {
+        flex-direction: row-reverse;
+      }
+      #author-img {
+        max-height: 10em;
+      }
+      #text {
+        font-size: 1.5em;
+        font-weight: bold;
+        text-align: center;
+      }
+      #author {
+        &::before {
+          content: '-'
+        }
+        font-size: 1.1em;
+        text-align: right;
+      }
+    }
+    #control {
+      display: flex;
+      justify-content: space-between;
+      margin-top: 2em;
+      #tweet-quote {
+        font-size: 1.5em;
+        color: $primary;
+        text-stroke: 0.09em $theme-black;
+        -webkit-text-stroke: 0.09em $theme-black;
+        display: grid;
+        place-content: center;
+        cursor: pointer;
+        text-decoration: none;
+      }
+      #new-quote {
+        border-radius: 10% 5%/15% 7%;
+        border: solid 0.2em $theme-black;
+        padding: 0.5em 1em;
+        background-color: $primary;
+        font-family: 'Architects Daughter', cursive;
+        font-weight: bold;
+        cursor: pointer;
+      }
+    }
+  }
+  #about {
+    align-self: center;
+    justify-self: center;
+    font-family: 'Architects Daughter', cursive;
+    font-size: 1em;
+    font-weight: bold;
+    color: $theme-black;
+    span.name {
+      padding-left: 0.5em;
+      font-size: 1.5em;
+    }
+  }
+}
